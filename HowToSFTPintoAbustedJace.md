@@ -2,7 +2,7 @@
 
 *please note that this is just advice and not meant to be technical support.  if you use this information at all, you assume all risk assocaited with your actions.  I hope this helps you, but it is not a promise of success.  if you're having issues, please contact your local rep or tridium for support.*
 
-1) Follow the serial shell instructions in the "Niagara JACE-XXXX Install and Startup Guide.pdf"
+1) Follow the serial shell instructions in the "Niagara JACE-8XXX Install and Startup Guide.pdf"
 
 2) Authenticate and log into the shell
 
