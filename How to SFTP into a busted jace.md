@@ -1,4 +1,4 @@
-#How to SFTP into a busted jace
+# How to SFTP into a busted jace 8000 that wont boot to grab a backup of the station
 
 *please note that this is just advice and not meant to be technical support.  if you use this information at all, you assume all risk assocaited with your actions.  I hope this helps you, but it is not a promise of success.  if you're having issues, please contact your local rep or tridium for support.*
 
@@ -22,3 +22,23 @@
 10) use the `get -R XXXX` command where `XXXX` is the name of your station directory.  the `-R` parameter for the `get` command allows you to copy everything recursively from that directory and all its subsequent subdirectories and files.
 
 11) if you started your command prompt in windows, the default launch directory for the command prompt is your "C:\user\ *your user name here* \ " This is where you'll find a copy of the station you just made. 
+
+# Please note:
+
+Though i've not done this yet with a JACE 9000 - it looks like they have a backup command right from the shell!  Thats awesome! 
+
+The new shell has these options:
+
+`---------------------------------------------------
+1   Update System Time
+2   Update Network Settings
+3   Ping Host
+4   System Diagnostic Options
+5   Change Current User Password
+6   Change System Passphrase
+7   Create SD Backup
+8   Restore SD Backup
+9   Reboot
+L   Logout
+
+Enter Choice :`
