@@ -11,6 +11,6 @@ and set:
 #   medium (current default): Requires modules to be signed by a valid, trusted certificate.
 #   high: Requires modules to be signed by a valid, trusted, CA issued certificate. Internal CAs are acceptable.
 
-niagara.moduleVerificationMode=low`
+niagara.moduleVerificationMode=low
 
 ```
