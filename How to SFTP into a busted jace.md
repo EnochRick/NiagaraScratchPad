@@ -7,9 +7,9 @@
 2) Authenticate and log into the shell
 
 3) Configure your Laptop to be able to access the JACE at its current IP:
-    **Example:** If your jace is at 10.0.0.20, 255.255.255.0, then set your laptop up to use a static ip of 10.0.0.21 with the same subnet mask
+    **Example:** If your jace is at `10.0.0.20` with a subnet mask of `255.255.255.0`, then set your laptop up to use a static ip of `10.0.0.21` with the same subnet mask.  Then direct connect the jace to your laptop ethernet port. 
 
-5) Enable the SFTP, use the default port of 22 to make life easy
+5) Enable the SFTP, use the default port of 22 in the serial shell of the jace.  it'll warn you to 
 
 6) Open a windows command prompt once SFTP is enabled on the JACE
 
@@ -29,8 +29,8 @@ Though i've not done this yet with a JACE 9000 - it looks like they have a backu
 
 The new shell has these options:
 
-`
----------------------------------------------------
+
+`---------------------------------------------------
 1   Update System Time
 2   Update Network Settings
 3   Ping Host
@@ -40,7 +40,7 @@ The new shell has these options:
 7   Create SD Backup
 8   Restore SD Backup
 9   Reboot
-L   Logout
+L   Logout`
 
-Enter Choice :
+`Enter Choice :
 `
