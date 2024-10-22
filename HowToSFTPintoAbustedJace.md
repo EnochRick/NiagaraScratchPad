@@ -29,26 +29,16 @@ Though i've not done this yet with a JACE 9000 - it looks like they have a backu
 
 The new shell has these options:
 
-
-`---------------------------------------------------`
-
-`1   Update System Time`
-
-`2   Update Network Settings`
-
-`3   Ping Host`
-
-`4   System Diagnostic Options`
-
-`5   Change Current User Password`
-
-`6   Change System Passphrase`
-
-`7   Create SD Backup`
-
-`8   Restore SD Backup`
-
-`9   Reboot`
-
-`L   Logout`
-
+``` properties
+---------------------------------------------------
+1   Update System Time
+2   Update Network Settings
+3   Ping Host
+4   System Diagnostic Options
+5   Change Current User Password
+6   Change System Passphrase
+7   Create SD Backup
+8   Restore SD Backup
+9   Reboot
+L   Logout
+```
