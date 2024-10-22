@@ -5,7 +5,7 @@ dont forget you can goto:
 
 and set: 
 
-```java
+```properties
 # Overrides the default module verification mode if necessary to adjust module signature verification requirements. Valid values are
 #   low: Warnings only. Option will be removed in a future release.
 #   medium (current default): Requires modules to be signed by a valid, trusted certificate.
