@@ -21,4 +21,4 @@
 
 10) use the `get -R XXXX` command where `XXXX` is the name of your station directory.  the `-R` parameter for the `get` command allows you to copy everything recursively from that directory and all its subsequent subdirectories and files.
 
-11) if you started your command prompt in windows, the default launch directory for the command prompt is your "C:\user\ *your user name here* \" This is where you'll find a copy of the station you just made. 
+11) if you started your command prompt in windows, the default launch directory for the command prompt is your "C:\user\ *your user name here* \ " This is where you'll find a copy of the station you just made. 
