@@ -52,5 +52,3 @@ The new shell has these options:
 
 `L   Logout`
 
-`Enter Choice :
-`
