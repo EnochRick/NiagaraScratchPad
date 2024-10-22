@@ -29,7 +29,8 @@ Though i've not done this yet with a JACE 9000 - it looks like they have a backu
 
 The new shell has these options:
 
-`---------------------------------------------------
+`
+---------------------------------------------------
 1   Update System Time
 2   Update Network Settings
 3   Ping Host
@@ -41,4 +42,5 @@ The new shell has these options:
 9   Reboot
 L   Logout
 
-Enter Choice :`
+Enter Choice :
+`
