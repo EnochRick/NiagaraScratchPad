@@ -8,9 +8,9 @@ Copy only modules that don’t exist Niagara old to Niagara new
 Where:
 	Robocopy: [Robocopy | Microsoft Learn](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy)
 	
-	/xc	Excludes existing files with the same timestamp, but different file sizes.
-	/xn	Source directory files newer than the destination are excluded from the copy.
-	/xo	Source directory files older than the destination are excluded from the copy.
+/xc	Excludes existing files with the same timestamp, but different file sizes.
+/xn	Source directory files newer than the destination are excluded from the copy.
+/xo	Source directory files older than the destination are excluded from the copy.
 
 Example
  `robocopy /xc /xn /xo C:\Niagara\Niagara-4.14.0.162\modules\ C:\Niagara\Niagara-4.15.1.16\modules\`
@@ -18,9 +18,8 @@ Example
 
 ## Niagara Module Comparison between two directories:
 	
-	1) Open WSL (I used Ubuntu in WSL)
-	
-	2) Use the following command:
+1) Open WSL (I used Ubuntu in WSL)
+2) Use the following command:
 	
 `diff -r /mnt/c/Niagara/Niagara-4.15.2.38/modules/ /mnt/c/temp/FX-Workbench\ 14.14.2/modules/ | grep "Only in /"`
 		
