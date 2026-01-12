@@ -17,7 +17,9 @@ Example
 
 
 ## Niagara Module Comparison between two directories:
+	
 	1) Open WSL (I used Ubuntu in WSL)
+	
 	2) Use the following command:
 	
 `diff -r /mnt/c/Niagara/Niagara-4.15.2.38/modules/ /mnt/c/temp/FX-Workbench\ 14.14.2/modules/ | grep "Only in /"`
