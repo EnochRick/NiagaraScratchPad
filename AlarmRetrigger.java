@@ -49,14 +49,14 @@ public class ProgramImpl
   /*--
   Public String QUERY is for getting the entire list of unacked alarms to be used in the program
   used the query window in niagara to generate this : local:|foxs:|alarm:|bql:select * where ackState = 'unacked'
-  this string will be used in the makeList() method below. 
   --*/
   //local:|foxs:|alarm:|bql:select * where ackState = 'unacked' and sourceState = 'offnormal'
   static String QUERY = "alarm:|bql:select * where ackState = 'unacked' and sourceState = 'offnormal'";
   BComponent prog; //This will be used to set the scope to this component in the niagara station on startup
   boolean dbug; //for later use
   int tableSize = 0; // used to check if BITable is empty
-  
+
+  //START STANDARD NIAGARA PROGRAM OBJECT METHODS//////////////////////////////////////////////
   public void onStart() throws Exception
   {
     //set the scope to "this" component in the niagara station on startup
@@ -77,7 +77,6 @@ public class ProgramImpl
   {
     // shutdown code here
   }
-  
   ////////////////////////////////////////////////END STANDARD NIAGARA PROGRAM OBJECT METHODS
   /*--
   There is an action slot defined "retriggerAlarms", this is the method for it.  
