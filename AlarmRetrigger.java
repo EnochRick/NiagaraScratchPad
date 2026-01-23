@@ -21,6 +21,7 @@ public class ProgramImpl
 
   public BStatusBoolean getDebug() { return (BStatusBoolean)get("debug"); }
   public String getFullQuery() { return getString("fullQuery"); }
+  public BRelTime getRetriggerDelay() { return (BRelTime)get("retriggerDelay"); }
 
 ////////////////////////////////////////////////////////////////
 // Setters
@@ -28,6 +29,7 @@ public class ProgramImpl
 
   public void setDebug(javax.baja.status.BStatusBoolean v) { set("debug", v); }
   public void setFullQuery(String v) { setString("fullQuery", v); }
+  public void setRetriggerDelay(javax.baja.sys.BRelTime v) { set("retriggerDelay", v); }
 
 ////////////////////////////////////////////////////////////////
 // Program Source
@@ -49,14 +51,14 @@ public class ProgramImpl
   /*--
   Public String QUERY is for getting the entire list of unacked alarms to be used in the program
   used the query window in niagara to generate this : local:|foxs:|alarm:|bql:select * where ackState = 'unacked'
+  this string will be used in the makeList() method below. 
   --*/
   //local:|foxs:|alarm:|bql:select * where ackState = 'unacked' and sourceState = 'offnormal'
   static String QUERY = "alarm:|bql:select * where ackState = 'unacked' and sourceState = 'offnormal'";
   BComponent prog; //This will be used to set the scope to this component in the niagara station on startup
   boolean dbug; //for later use
   int tableSize = 0; // used to check if BITable is empty
-
-  //START STANDARD NIAGARA PROGRAM OBJECT METHODS//////////////////////////////////////////////
+  
   public void onStart() throws Exception
   {
     //set the scope to "this" component in the niagara station on startup
@@ -77,6 +79,7 @@ public class ProgramImpl
   {
     // shutdown code here
   }
+  
   ////////////////////////////////////////////////END STANDARD NIAGARA PROGRAM OBJECT METHODS
   /*--
   There is an action slot defined "retriggerAlarms", this is the method for it.  
@@ -137,10 +140,26 @@ public class ProgramImpl
           //Calculate duration
           long durationMillis = System.currentTimeMillis() - alarmTime.getMillis();
           
+          //Set Actual Duration of Unack and in alarm to BReltime named "duration"
           BRelTime duration = BRelTime.make(durationMillis);
+          if(dbug){System.out.println("rec source: " + rec.getSource().encodeToString());}
+          
+          //Check to see if alarm duration is longer than the user input on the object
+          if (duration.getMillis() > getRetriggerDelay().getMillis()){
+            System.out.println("Alarm Duration: " + duration.toString() + " and user input is : " + getRetriggerDelay().toString());  
+            // Get the Alarm Service
+            BAlarmService service = (BAlarmService)Sys.getService(BAlarmService.TYPE);
+          
+            // Create a new alarm event
+            BAlarmRecord newRecord = new BAlarmRecord();
+            newRecord.setSource(rec.getSource());
+            newRecord.setAlarmClass(rec.getAlarmClass());
+            // Post it
+            service.routeAlarm(newRecord);
+          }// ends retrigger IF
   
-          System.out.println("Duration: "+ duration.toString());
         }// ends if 
+        
       }//ends while
       
     }else {//if table size = 0 else statement
