@@ -1,5 +1,7 @@
 # BACnet Introduction — Summary for IT Network Engineers
 
+Please note: this is a document in progress.  There are sections I am consolidating.  
+
 ## What is BACnet?
 BACnet (Building Automation Control Network) is an ANSI/ISO standard data communication protocol for building automation systems — HVAC, fire, lighting, security, elevators, etc. As an IT network engineer, you'll encounter it when building automation systems share your IP infrastructure.
 
@@ -17,10 +19,6 @@ BACnet is a collapsed-stack protocol that maps to the OSI model, primarily opera
 * **MS/TP (Master-Slave/Token Passing):** A legacy 2-wire twisted-pair system based on **EIA-485**. These segments usually require a BACnet router to interface with the IP network. These "subnetworks" excel having wire lengths up to 4,000 feet creating a separate, isolated serial network that typically doesn't touch your IP infrastructure unless bridged through a gateway or router. Some larger IP BAS controllers (called global controllers) can act as this router. 
 
 * **Other Supported Media:** Includes ARCNET, Point-to-Point (RS-232), and ZigBee (wireless mesh). The wireless mesh is typically used as a gateway to low-cost sensors distributed around the building for various needs of a facility. Not a native BACnet transport so its less common in buildings but important to still be aware of.
-
-
-
-
 
 
 ---
@@ -70,9 +68,6 @@ BACnet has defined **Web Services (BACnet/WS)** using HTTP over TCP/IP and XML s
 - Be aware that **BACnet routers** are often embedded in building controllers, not separate appliances
 - UDP port **47808** is the standard BACnet/IP port — ensure it's permitted where needed
 - The **MS/TP** serial segments are separate from your IP network but connect via gateways/routers
-
-
-
 
 
 ### 3. IP Infrastructure Requirements
