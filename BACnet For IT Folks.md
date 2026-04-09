@@ -91,4 +91,7 @@ Integrating BACnet/IP into a managed network introduces specific requirements fo
 I love these guys and their products: 
 
 [https://www.ccontrols.com/video/bacnet.htm](https://www.ccontrols.com/video/bacnet.htm)
+
 [https://www.ccontrols.com/lc/bacnet.htm](https://www.ccontrols.com/lc/bacnet.htm)
+
+[https://store.chipkin.com/articles/bacnet-index-page](https://store.chipkin.com/articles/bacnet-index-page)
