@@ -87,6 +87,8 @@ Integrating BACnet/IP into a managed network introduces specific requirements fo
 * **Object-Oriented Data:** All data in a device is represented as **Objects** (e.g., Analog Input, Binary Output) with defined **Properties** (e.g., Present_Value, Status_Flags), making it highly structured for integration.
 
 # Useful links:
+
 I love these guys and their products: 
-(https://www.ccontrols.com/video/bacnet.htm)[https://www.ccontrols.com/video/bacnet.htm]
-(https://www.ccontrols.com/lc/bacnet.htm)[https://www.ccontrols.com/lc/bacnet.htm]
+
+[https://www.ccontrols.com/video/bacnet.htm](https://www.ccontrols.com/video/bacnet.htm)
+[https://www.ccontrols.com/lc/bacnet.htm](https://www.ccontrols.com/lc/bacnet.htm)
